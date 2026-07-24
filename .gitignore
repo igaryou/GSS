@@ -49,3 +49,4 @@ credentials.json
 *.log
 *.tmp
 *.swp
+*.pkl
