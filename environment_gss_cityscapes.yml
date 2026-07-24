@@ -1,0 +1,10 @@
+name: gss-py38
+channels:
+  - defaults
+dependencies:
+  - python=3.8.20
+  - pip=24.2
+
+# Run scripts/setup_gss_cityscapes.sh after creating this base environment.
+# The setup script installs the CUDA-specific PyTorch/MMCV wheels, the pinned
+# Python dependencies, GSS, MSeg API, and the official DALL-E VQ-VAE weights.

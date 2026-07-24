@@ -221,6 +221,11 @@ class Dalle_VAE(BasicVAE):
     def load_model(self, model_dir, device):
         self.encoder = load_model(os.path.join(model_dir, "encoder.pkl"), device)
         self.decoder = load_model(os.path.join(model_dir, "decoder.pkl"), device)
+        # The official 2021 pickle predates this PyTorch Upsample attribute.
+        for module in self.decoder.modules():
+            if isinstance(module, nn.Upsample) and \
+                    not hasattr(module, 'recompute_scale_factor'):
+                module.recompute_scale_factor = None
 
     def decode(self, img_seq, img_size):
         bsz = img_seq.size()[0]

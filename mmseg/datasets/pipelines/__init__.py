@@ -4,6 +4,7 @@ from .formatting import (Collect, ImageToTensor, ToDataContainer, ToTensor,
                          Transpose, to_tensor)
 from .loading import LoadAnnotations, LoadImageFromFile, LoadDepthAnnotations
 from .test_time_aug import MultiScaleFlipAug
+from .torchvision_color_jitter import TorchvisionColorJitter
 from .transforms import (CLAHE, AdjustGamma, Normalize, Pad,
                          PhotoMetricDistortion, RandomCrop, RandomCutOut,
                          RandomFlip, RandomMosaic, RandomRotate, Rerange,
@@ -17,5 +18,5 @@ __all__ = [
     'Normalize', 'SegRescale', 'PhotoMetricDistortion', 'RandomRotate',
     'AdjustGamma', 'CLAHE', 'Rerange', 'RGB2Gray', 'RandomCutOut',
     'RandomMosaic',
-    'ToUniversalLabel', 'LoadDepthAnnotations'
+    'ToUniversalLabel', 'LoadDepthAnnotations', 'TorchvisionColorJitter'
 ]
