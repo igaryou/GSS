@@ -28,7 +28,7 @@ checkpoints/
 # Datasets
 data/
 datasets/
-cityscapes/
+/cityscapes/
 
 # IDE
 .vscode/
@@ -46,6 +46,7 @@ Thumbs.db
 credentials.json
 
 # Temporary files
+.nfs*
 *.log
 *.tmp
 *.swp
